@@ -6,6 +6,6 @@ This repository is for submitting and storing projects related to the **Algorith
 
 | Project  | Description |
 |----------|------------|
-| [**U1T1**]() | Develop a prompt to create a Jupyter Notebook tutorial |
+| [**U1T1**](https://github.com/gaagarthur/datastructure/tree/main/U1T1) | Develop a prompt to create a Jupyter Notebook tutorial |
 
 
