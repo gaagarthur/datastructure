@@ -1,3 +1,5 @@
+## ARTHUR GAAG - 20230087350
+
 ### OBJECTIVE
 
   
@@ -5,7 +7,7 @@
 The objective of this assignment is to implement algorithms using Python and NetworkX for the construction and manipulation of graph networks derived from real-world data from UFRN's Electrical and Computing Engineering grad program.
 
   
-#### SECTION 1
+### SECTION 1
 For this first section, the data being analyzed is divided by year, from 2010 to 2025.
 
   
@@ -29,6 +31,10 @@ density = round(100 * nx.density(G), 2)
 avg_neighbors = round((2*edges) / nodes, 2)
 
 ````
+
+
+
+*Whole code can be found on [requisito1.py](requisito1.py)
 
   
 
@@ -83,6 +89,10 @@ The four graphs have the following properties:
 4. The size of the edge is proportional to the number of citations that edge (paper) has.
 
   
+
+*Code for this section can be found on [requisito2.py](requisito2.py)
+
+
 
 <div  align="center">
 
