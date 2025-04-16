@@ -48,7 +48,7 @@ This data was organized in two graphs:
 
 <img  src="images/curve_graph.svg"  alt="Graph Metrics Over Time"  width="45%"  />
 
-<img  src="image2.png"  alt="Histogram of Density vs. Nodes"  width="45%"  />
+<img  src="images/bar_chart.svg"  alt="Histogram of Density vs. Nodes"  width="45%"  />
 
 </div>
 
@@ -86,15 +86,15 @@ The four graphs have the following properties:
 
 <div  align="center">
 
-<img  src="image3.png"  alt="Graph 1"  width="45%"  />
+<img  src="images/graphPPgEEC2012.svg"  alt="Graph 1"  width="45%"  />
 
-<img  src="image4.png"  alt="Graph 2"  width="45%"  />
+<img  src="images/graphPPgEEC2016.svg"  alt="Graph 2"  width="45%"  />
 
 <br  />
 
-<img  src="image5.png"  alt="Graph 3"  width="45%"  />
+<img  src="images/graphPPgEEC2020.svg"  alt="Graph 3"  width="45%"  />
 
-<img  src="image6.png"  alt="Graph 4"  width="45%"  />
+<img  src="images/graphPPgEEC2024.svg"  alt="Graph 4"  width="45%"  />
 
 </div>
 
