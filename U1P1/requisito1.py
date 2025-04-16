@@ -75,14 +75,23 @@ plt.savefig("images/curve_graph.png")
 #-----------------------------OUTPUT BAR GRAPH-----------------------------------------------------------------
 norm = plt.Normalize(min(list_nodes),max(list_nodes))
 clrs = cm.coolwarm(norm(list_nodes))
-plt.figure(figsize=(10, 6))
-plt.bar(list_years, list_density, width = 1.0, edgecolor = 'grey', color=clrs)
+fig, ax = plt.subplots(figsize=(10, 6))  # Use this instead of plt.figure()
+bars = ax.bar(list_years, list_density, width=1.0, edgecolor='grey', color=clrs)
 
-# Labels
-plt.xlabel("Year")
-plt.ylabel("Density (%)")
-plt.title("Density per Year")
-plt.tight_layout()
+# Create ScalarMappable
+color_scale = plt.cm.ScalarMappable(cmap=cm.coolwarm, norm=norm)
+color_scale.set_array([])
+
+# Tie the colorbar to the existing axes (ax)
+cbar = fig.colorbar(color_scale, ax=ax)
+cbar.set_label('Number of nodes')
+
+# Labels and layout
+ax.set_xlabel("Year")
+ax.set_ylabel("Density (%)")
+ax.set_title("Density per Year")
+ax.set_xticks(list_years)
+fig.tight_layout()
 
 plt.savefig("images/bar_chart.png")
 plt.savefig("images/bar_chart.svg")  # Vector output
