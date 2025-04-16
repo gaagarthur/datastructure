@@ -46,7 +46,7 @@ This data was organized in two graphs:
 
 <div  align="center">
 
-<img  src="image1.png"  alt="Graph Metrics Over Time"  width="45%"  />
+<img  src="images/curve_graph.svg"  alt="Graph Metrics Over Time"  width="45%"  />
 
 <img  src="image2.png"  alt="Histogram of Density vs. Nodes"  width="45%"  />
 
