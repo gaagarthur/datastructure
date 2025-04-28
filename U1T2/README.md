@@ -21,9 +21,12 @@ In order to obtain the .csv files the following prompt was used:
 ````python
 
 Give me a list of 50 dishes that are popular in Brazil.  
-For each dish, provide the dish name, a list of ingredients, and the group each ingredient belongs to (carbohydrate, protein, fat, vegetable, fruit, dairy, condiment, or others).  
+For each dish, provide the dish name, a list of ingredients, and the group each
+ingredient belongs to (carbohydrate, protein, fat, vegetable, fruit, dairy, condiment, or others).  
   
-Organize the information in a CSV file, where each dish is a row with three columns: dish_name, ingredients, and ingredient_type. Ensure that the order of ingredients matches the order of ingredient types. Items within a single cell should be separated by commas.  
+Organize the information in a CSV file, where each dish is a row with three columns: dish_name,
+ingredients, and ingredient_type. Ensure that the order of ingredients matches the order of
+ingredient types. Items within a single cell should be separated by commas.  
   
 Next, create a nodes.csv file with three columns: node, ing_type, and instances, where:  
   
@@ -34,7 +37,8 @@ Finally, create an edges.csv file with three columns: source, target, and instan
   
 source and target = distinct ingredients that appear together in at least one dish,  
 instances = how many times those two ingredients appear together across the recipes.  
-Remember, a connection between ingredient_1 and ingredient_2 is the same as between ingredient_2 and ingredient_1.
+Remember, a connection between ingredient_1 and ingredient_2 is the same as
+between ingredient_2 and ingredient_1.
 
 ````
 
