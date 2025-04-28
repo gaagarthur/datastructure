@@ -1,0 +1,271 @@
+source,target,instances
+beef,black beans,1
+beef,collard greens,1
+beef,farofa,1
+beef,orange,1
+beef,pork,3
+beef,rice,1
+black beans,collard greens,1
+black beans,farofa,1
+black beans,orange,1
+black beans,pork,1
+black beans,rice,1
+collard greens,farofa,1
+collard greens,orange,1
+collard greens,pork,1
+collard greens,rice,1
+farofa,orange,1
+farofa,pork,1
+farofa,rice,1
+orange,pork,1
+orange,rice,1
+pork,rice,1
+bell pepper,cilantro,1
+bell pepper,coconut milk,1
+bell pepper,dende oil,1
+bell pepper,fish,1
+bell pepper,onion,1
+bell pepper,shrimp,1
+bell pepper,tomato,1
+cilantro,coconut milk,1
+cilantro,dende oil,1
+cilantro,fish,1
+cilantro,onion,1
+cilantro,shrimp,1
+cilantro,tomato,1
+coconut milk,dende oil,4
+coconut milk,fish,1
+coconut milk,onion,2
+coconut milk,shrimp,3
+coconut milk,tomato,2
+dende oil,fish,1
+dende oil,onion,3
+dende oil,shrimp,5
+dende oil,tomato,2
+fish,onion,3
+fish,shrimp,1
+fish,tomato,2
+onion,shrimp,3
+onion,tomato,4
+shrimp,tomato,2
+butter,cheese,3
+butter,egg,2
+butter,milk,1
+butter,tapioca flour,1
+cheese,egg,1
+cheese,milk,3
+cheese,tapioca flour,1
+egg,milk,2
+egg,tapioca flour,1
+milk,tapioca flour,1
+butter,chocolate sprinkles,1
+butter,cocoa powder,1
+butter,condensed milk,1
+chocolate sprinkles,cocoa powder,1
+chocolate sprinkles,condensed milk,1
+cocoa powder,condensed milk,1
+black-eyed peas,dende oil,1
+black-eyed peas,onion,1
+black-eyed peas,shrimp,1
+bread,coconut milk,1
+bread,dende oil,1
+bread,peanuts,1
+bread,shrimp,1
+coconut milk,peanuts,2
+dende oil,peanuts,2
+peanuts,shrimp,2
+chicken,cream cheese,1
+chicken,flour,2
+chicken,potato,1
+cream cheese,flour,1
+cream cheese,potato,1
+flour,potato,1
+cheese,flour,2
+cheese,ground beef,2
+cheese,heart of palm,2
+flour,ground beef,1
+flour,heart of palm,2
+ground beef,heart of palm,1
+beans,cheese,1
+beans,rice,1
+beans,sun-dried meat,1
+cheese,rice,1
+cheese,sun-dried meat,1
+rice,sun-dried meat,1
+beef,chicken,1
+beef,sausage,1
+chicken,pork,1
+chicken,sausage,1
+pork,sausage,1
+bacon,butter,1
+bacon,cassava flour,2
+bacon,egg,2
+bacon,onion,2
+butter,cassava flour,1
+butter,onion,2
+cassava flour,egg,2
+cassava flour,onion,2
+egg,onion,1
+butter,coconut,1
+butter,tapioca starch,2
+cheese,coconut,2
+cheese,tapioca starch,2
+coconut,tapioca starch,1
+beef jerky,garlic,1
+beef jerky,onion,1
+beef jerky,rice,1
+beef jerky,tomato,1
+garlic,onion,5
+garlic,rice,1
+garlic,tomato,1
+onion,rice,2
+rice,tomato,1
+cinnamon,egg,1
+cinnamon,flour,1
+cinnamon,milk,4
+cinnamon,sugar,4
+egg,flour,1
+egg,sugar,1
+flour,milk,2
+flour,sugar,3
+milk,sugar,8
+cheese,chicken,1
+chicken,heart of palm,1
+butter,flour,1
+butter,guava paste,1
+butter,sugar,1
+flour,guava paste,1
+guava paste,sugar,1
+dende oil,okra,1
+okra,peanuts,1
+okra,shrimp,1
+butter,garlic,1
+butter,pumpkin,1
+garlic,pumpkin,1
+onion,pumpkin,1
+coconut milk,milk,1
+coconut milk,sugar,1
+coconut milk,white corn,1
+milk,peanuts,1
+milk,white corn,1
+peanuts,sugar,3
+peanuts,white corn,1
+sugar,white corn,1
+cheese,corn,1
+cheese,sugar,2
+corn,milk,3
+corn,sugar,3
+cinnamon,corn,1
+bacon,beans,2
+bacon,flour,1
+bacon,garlic,1
+beans,flour,1
+beans,garlic,1
+beans,onion,1
+flour,garlic,1
+flour,onion,1
+bacon,beef,1
+bacon,manioc leaves,1
+bacon,pork,1
+beef,manioc leaves,1
+manioc leaves,pork,1
+collard greens,onion,1
+collard greens,potato,2
+collard greens,sausage,2
+onion,potato,2
+onion,sausage,1
+potato,sausage,1
+chicken,garlic,1
+chicken,okra,1
+chicken,onion,2
+garlic,okra,1
+okra,onion,1
+carrot,collard greens,1
+carrot,oxtail,1
+carrot,potato,2
+collard greens,oxtail,1
+oxtail,potato,1
+beans,carrot,1
+beans,potato,1
+beans,tripe,1
+carrot,tripe,1
+potato,tripe,1
+cornmeal,egg,1
+cornmeal,peas,1
+cornmeal,sardines,1
+cornmeal,tomato,1
+egg,peas,1
+egg,sardines,1
+egg,tomato,1
+peas,sardines,1
+peas,tomato,1
+sardines,tomato,1
+cassava,cheese,1
+cassava,ground beef,1
+fish,potato,1
+potato,tomato,1
+cream cheese,pumpkin,1
+cream cheese,shrimp,1
+pumpkin,shrimp,1
+coconut milk,shellfish,1
+dende oil,shellfish,1
+blood,garlic,1
+blood,goat stomach,1
+blood,onion,1
+garlic,goat stomach,1
+goat stomach,onion,1
+cinnamon,rice,1
+milk,rice,1
+rice,sugar,1
+carrot,chicken,1
+carrot,corn,1
+carrot,mayonnaise,1
+carrot,peas,1
+chicken,corn,1
+chicken,mayonnaise,1
+chicken,peas,1
+corn,mayonnaise,1
+corn,peas,1
+mayonnaise,peas,1
+chicken,peppers,1
+chicken,rice,1
+onion,peppers,1
+peppers,rice,1
+cassava sauce,duck,1
+cassava sauce,jambu leaves,1
+duck,jambu leaves,1
+jambu,shrimp,1
+jambu,tucupi,1
+shrimp,tucupi,1
+banana,cassava flour,1
+banana,fish,1
+banana,onion,1
+cassava flour,fish,1
+pork skin,salt,1
+butter,corn,1
+butter,salt,1
+corn,salt,1
+cheese,guava paste,1
+coconut,milk,1
+coconut,sugar,1
+cassava flour,peanuts,1
+cassava flour,sugar,1
+corn,flour,1
+cinnamon,cornmeal,1
+cornmeal,milk,1
+cornmeal,sugar,1
+bacon,collard greens,1
+bacon,sausage,1
+beans,cassava flour,1
+beans,collard greens,1
+beans,egg,1
+beans,sausage,1
+cassava flour,collard greens,1
+cassava flour,sausage,1
+collard greens,egg,1
+egg,sausage,1
+cassava,coconut milk,1
+cassava,dende oil,1
+cassava,onion,1
+cassava,shrimp,1
+cassava,tomato,1
