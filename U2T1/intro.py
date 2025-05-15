@@ -1,12 +1,12 @@
 import networkx as nx
-import pandas as pd
 import matplotlib.pyplot as plt
 import osmnx as ox
 import time
+from dijkstra import classic_dijkstra_path
 
 
 G = ox.graph_from_place("Natal, RN, Brazil", network_type="drive")
-nodes = nx.number_of_nodes(G)
+#nodes = nx.number_of_nodes(G)
 walfredo_gurgel = (ox.geocode("Complexo Hospitalar Mosenhor Walfredo Gurgel, natal RN, Brazil"))
 node_walfredo_gurgel = ox.distance.nearest_nodes(G,walfredo_gurgel[1],walfredo_gurgel[0])
 neighborhoods = {"Lagoa Nova", "Candelaria"}#, "Capim Macio", "Neopolis", "Nova Descoberta", "Pitimbu", "Ponta Negra", "Petropolis", "Alecrim", "Mae Luiza", "Quintas", "Redinha"}
@@ -19,29 +19,32 @@ with open("routes.txt", "w") as file:
         print("", file=file)
 
 for nh in neighborhoods:
-    destin = (ox.geocode(f"{nh}, natal, RN, Brazil"))
-    node_destin = ox.distance.nearest_nodes(G,destin[1],destin[0])
+    taget = (ox.geocode(f"{nh}, natal, RN, Brazil"))
+    taget_node = ox.distance.nearest_nodes(G,taget[1],taget[0])
     
 #=========================== DIJKSTRA MINIHEAP ==================================
     start_time = time.perf_counter()
-    route = nx.shortest_path(G,node_walfredo_gurgel, node_destin, weight="length", method="dijkstra")
+    route = nx.shortest_path(G,node_walfredo_gurgel, taget_node, weight="length", method="dijkstra")
     end_time = time.perf_counter()
-    #print(f"dijkstra miniheap for {nh}: {(end_time - start_time):.4f} seconds")
-
+    print(f"dijkstra miniheap for {nh}: {(end_time - start_time):.4f} seconds")
+#=========================== DIJKSTRA O(N^2) =====================================
     start_time = time.perf_counter()
-    _,route_dk = nx.single_source_dijkstra(G,node_walfredo_gurgel,node_destin,weight="length")
+    route_dk = classic_dijkstra_path(G,node_walfredo_gurgel,taget_node,weight="length")
     end_time = time.perf_counter()
-    #print(f"dijkstra o(n^2) for {nh}: {(end_time - start_time):.4f} seconds")
-
+    print(f"dijkstra o(n^2) for {nh}: {(end_time - start_time):.4f} seconds")
+#================================ OSMNX ==========================================
     start_time = time.perf_counter()
-    path = list( ox.routing.k_shortest_paths(G, node_walfredo_gurgel, node_destin, 1, weight='length'))
+    path = list( ox.routing.k_shortest_paths(G, node_walfredo_gurgel, taget_node, 1, weight='length'))
     route_osm =path[0]
     end_time = time.perf_counter()
     #print(f"dijkstra osmnx for {nh}: {(end_time - start_time):.4f} seconds\n")
 
-    fig, ax = ox.plot_graph_route(G, route, node_size=0, show=False)
-    plt.savefig(f"{nh}_dijkstra_miniheap.png")
-    plt.close(fig)
+#=========================== PLOT ==================================
+    
+    #plt.figure(figsize=(70, 70))
+    #fig, ax = ox.plot_graph_route(G, route, node_size=0, show=False)
+    #plt.savefig(f"{nh}_dijkstra_miniheap.png")
+    #plt.close(fig)
     #fig, ax = ox.plot_graph_route(G, route_dk, node_size=0, show=False, save=False)
     #plt.savefig(f"{nh}_dijkstra_n2.svg")
     #plt.close(fig)

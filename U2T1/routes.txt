@@ -1,19 +1,19 @@
 
 Candelaria:
-Travel time Dijkstra miniheap: 465.3985
+Travel time Dijkstra miniheap: 465.6211
 Total Distance Dijkstra miniheap: 5400.3341
-Travel time Dijkstra O(n^2): 465.3985
+Travel time Dijkstra O(n^2): 465.6211
 Total Distance Dijkstra O(n^2): 5400.3341
-Travel time OSMnx: 465.3985
+Travel time OSMnx: 465.6211
 Total Distance OSMnx: 5400.3341
 
 
 Lagoa Nova:
-Travel time Dijkstra miniheap: 175.8884
+Travel time Dijkstra miniheap: 175.9180
 Total Distance Dijkstra miniheap: 2328.8832
-Travel time Dijkstra O(n^2): 175.8884
+Travel time Dijkstra O(n^2): 175.9180
 Total Distance Dijkstra O(n^2): 2328.8832
-Travel time OSMnx: 175.8884
+Travel time OSMnx: 175.9180
 Total Distance OSMnx: 2328.8832
 
 
