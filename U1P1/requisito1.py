@@ -75,7 +75,7 @@ plt.savefig("images/curve_graph.png")
 #-----------------------------OUTPUT BAR GRAPH-----------------------------------------------------------------
 norm = plt.Normalize(min(list_nodes),max(list_nodes))
 clrs = cm.coolwarm(norm(list_nodes))
-fig, ax = plt.subplots(figsize=(10, 6))  # Use this instead of plt.figure()
+fig, ax = plt.subplots(figsize=(10, 6))
 bars = ax.bar(list_years, list_density, width=1.0, edgecolor='grey', color=clrs)
 
 # Create ScalarMappable
