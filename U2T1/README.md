@@ -19,17 +19,17 @@ Important: the return list must contain the names of the neighborhoods selected
 
 This resulted in a list that contain the neighborhoods:
 - Lagoa Nova
--Candelaria
--Capim Macio
--Neopolis
--Nova Descoberta
--Pitimbu
--Ponta Negra
--Petropolis
--Alecrim
--Mae Luiza
--Quintas
--Redinha
+- Candelaria
+- Capim Macio
+- Neopolis
+- Nova Descoberta
+- Pitimbu
+- Ponta Negra
+- Petropolis
+- Alecrim
+- Mae Luiza
+- Quintas
+- Redinha
 
 ## DATA FROM OPEN SOURCE MAP
 
