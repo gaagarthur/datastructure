@@ -39,7 +39,7 @@ for nh in neighborhoods:
     end_time = time.perf_counter()
     #print(f"dijkstra osmnx for {nh}: {(end_time - start_time):.4f} seconds\n")
 
-#=========================== PLOT ==================================
+#=================================== PLOT =========================================
     
     #plt.figure(figsize=(70, 70))
     #fig, ax = ox.plot_graph_route(G, route, node_size=0, show=False)
