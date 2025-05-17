@@ -2,50 +2,51 @@ import math
 import networkx as nx
 
 def classic_dijkstra_path(G, source_node, target_node, weight="length"):
-    # Initialize distances and predecessors
+        # Initialize distances and predecessors
     dist = {node: math.inf for node in G.nodes}
     prev = {node: None for node in G.nodes}
     dist[source_node] = 0
+
+    # Set of visited nodes
     visited = set()
 
-    while len(visited) < len(G):
-        # Select the unvisited node with the smallest distance
-        current = min(
-            (node for node in G.nodes if node not in visited),
-            key=lambda node: dist[node],
-            default=None
-        )
+    while len(visited) < len(G.nodes):
+        # Find the unvisited node with the smallest distance
+        min_dist = math.inf
+        u = None
+        for node in G.nodes:
+            if node not in visited and dist[node] < min_dist:
+                min_dist = dist[node]
+                u = node
 
-        if current is None or dist[current] == math.inf:
-            break  # Remaining nodes are unreachable
+        if u is None:  # All remaining nodes are unreachable
+            break
 
-        visited.add(current)
+        visited.add(u)
 
-        # Use successors for directed graphs
-        for neighbor in G.successors(current):
-            if neighbor in visited:
-                continue
-
-            # Handle MultiDiGraph: choose the edge with the minimum weight
+        # Relaxation step
+        for v in G.successors(u):
             min_weight = math.inf
-            for _, edge_data in G[current][neighbor].items():
-                w = edge_data.get(weight, 1)
-                if w < min_weight:
-                    min_weight = w
+            for key in G[u][v]:
+                edge_data = G[u][v][key]
+                edge_weight = edge_data.get(weight, 1)  # default weight is 1
+                if edge_weight < min_weight:
+                    min_weight = edge_weight
 
-            alt = dist[current] + min_weight
-            if alt < dist[neighbor]:
-                dist[neighbor] = alt
-                prev[neighbor] = current
+            if dist[u] + min_weight < dist[v]:
+                dist[v] = dist[u] + min_weight
+                prev[v] = u
 
-    # Reconstruct the path
-    if dist[target_node] == math.inf:
-        raise nx.NetworkXNoPath(f"No path from {source_node} to {target_node}")
-
+    # Reconstruct the path from source to target
     path = []
     current = target_node
     while current is not None:
-        path.insert(0, current)
+        path.append(current)
         current = prev[current]
 
-    return path
+    path.reverse()
+
+    if path and path[0] == source_node:
+        return path
+    else:
+        return []  # No path found
