@@ -68,7 +68,7 @@ As mentioned in the objective, three methods of finding the shortest path betwee
 The first one was the Dijkstra's algorithm implemented with a min heap (priority queue), Networkx implements it in the "shortest_path" function,  
 all that had to be done was, call the function making sure to pass the graph , starting node, target node, method of comparison, and method of search as parameters.
 
-The second method used was the classic Dijkstra shortest path algorithm, which has a time complexity of $O(n^2)$. Because of the how inefficient the classic algorithm is, compared to the one implemented with a priority queue, it is not built in to networkx. Since the main objective was to use and compare the different algorithms, the LLM ChatGPT was used to implement a classic ($O(n^2)$) that would take the same parameters given to Networkx's "shortest_path()", minus the method of search (prompt 2).
+The second method used was the classic Dijkstra shortest path algorithm, which has a time complexity of $O(n^2)$. Because of the how inefficient the classic algorithm is, compared to the one implemented with a priority queue, it is not built in to networkx. Since the main objective was to use and compare the different algorithms, the LLM ChatGPT was used to implement a classic ( $O(n^2)$ ) that would take the same parameters given to Networkx's "shortest_path()", minus the method of search (prompt 2).
 
 ````
 
