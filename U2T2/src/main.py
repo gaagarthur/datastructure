@@ -26,12 +26,19 @@ print (len(routes_d))
 print (len(routes_dc),"\n\n")
 node_sizes, node_colors = aux.node_sizes_colors(G, all_nodes)
 
-fig2, ax2 = ox.plot_graph_routes(G,routes=routes_a,
-                                 route_colors=['red','blue', 'green', 'orange','purple', 'cyan', 'magenta', 'yellow','brown', 'orangered'], 
-                                 show=False, close=False, node_size=node_sizes, node_color=node_colors)
+#fig2, ax2 = ox.plot_graph_routes(G,routes=routes_a,
+                                 #route_colors=['red','blue', 'green', 'orange','purple', 'cyan', 'magenta', 'yellow','brown', 'orangered'], 
+                                 #show=False, close=False, node_size=node_sizes, node_color=node_colors)
 
-fig2.savefig(f"../images/map_routeA.svg", dpi=150, bbox_inches="tight")
+#fig2.savefig(f"../images/map_routeA.svg", dpi=150, bbox_inches="tight")
 
+print((dist_a))
+print(sum(dist_d))
+print(sum(dist_dc))
+
+print(sum(dist_a)/10)
+print(sum(dist_d)/10)
+print(sum(dist_dc)/10)
 
 
 """
