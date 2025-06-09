@@ -40,9 +40,9 @@ And finally, with the sequence of nodes we can use the A* algorithm, and both Di
 |---|---|---|
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="image1.png" alt="images/map_routeAstar" style="width: 32%; height: auto;">
-  <img src="image2.png" alt="images/map_routeDijk" style="width: 32%; height: auto;">
-  <img src="image3.png" alt="images/map_routeDijkClass" style="width: 32%; height: auto;">
+  <img src="images/map_routeAstar.svg" alt="images/map_routeAstar" style="width: 32%; height: auto;">
+  <img src="images/map_routeDijk.svg" alt="images/map_routeDijk" style="width: 32%; height: auto;">
+  <img src="images/map_routeDijkClass.svg" alt="images/map_routeDijkClass" style="width: 32%; height: auto;">
 </div>
 *the routes came out all the same color, will resolve it later.
 
