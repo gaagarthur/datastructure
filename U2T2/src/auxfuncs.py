@@ -26,22 +26,23 @@ def import_graph():
 
 def limit_coods(df):
     max_lat = -40.0
-    min_lat = 0
+    min_lat = 0.0
     max_lon = -7.0
-    min_lon = 0
+    min_lon = 0.0
 
     for row in df.itertuples(index=False):
         lat = row.Lat
         lon = row.Lon
-    if(lat<min_lat):
-        min_lat = lat
-    elif(lat>max_lat):
-        max_lat = lat
+        
+        if(lat<min_lat):
+            min_lat = lat
+        if(lat>max_lat):
+            max_lat = lat
 
-    if(lon<min_lon):
-        min_lon = lon
-    elif(lon>max_lon):
-        max_lon = lon
+        if(lon<min_lon):
+            min_lon = lon
+        if(lon>max_lon):
+            max_lon = lon
 
     
     return max_lat,min_lat,max_lon,min_lon
@@ -92,8 +93,8 @@ def assign_nodes(G, df, min_lon,step_lat,step_lon):
                 agent_10.append(node)
     print("\n1.2")
     hq = ox.distance.nearest_nodes(G, X=-35.26213858466005, Y=-5.753250924379606)
-    all_nodes = collec_stat + [[hq,"Center","Center"]]
-  
+    all_nodes = collec_stat
+    all_nodes.append([hq,"Center","Center"])
 
     all_agents = {
               "ag1" : agent_1,
@@ -144,7 +145,9 @@ def path_f(G,hq,all_agents):
             full_route_DC = []
             key = f"dist_{i}"
             #print(agent)
-            nodes = [hq] + all_agents[agent]
+            #nodes = [hq] + all_agents[agent]
+            nodes = [hq]
+            nodes.extend(all_agents[agent])
             distances = {}
             distances_dijkstra = {}
             #distances_dijk_sqr = {}

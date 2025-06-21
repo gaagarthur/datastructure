@@ -14,8 +14,15 @@ print("\n1")
 step_lat = (max_lat+min_lat)/2
 step_lon = (min_lon-max_lon)/5
 
+print(max_lat,min_lat,max_lon,min_lon)
+print(step_lat,step_lon)
+
 all_nodes, all_agents, hq = aux.assign_nodes(G, df, min_lon,step_lat,step_lon)
 print("\n2")
+
+print(all_agents)
+
+
 routes_a, routes_d, routes_dc, time_a, dist_a, time_d, dist_d, time_dc, dist_dc = aux.path_f(G,hq,all_agents)
 
 routes_colors = ['red','blue', 'green', 'orange',
