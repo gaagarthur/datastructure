@@ -87,10 +87,10 @@ that was previously calculated in python. Then the nodes were colored based on t
     <table>
         <tr>
             <td style="width: 200px; text-align: center;">
-                <img src="images/scale_degree.png" alt="Image 1" style="width: 60%; height: auto;">
+                <img src="images/scale_degree.png" alt="Image 1" style="width: 100%; height: auto;">
             </td>
             <td style="width: 200px; text-align: center;">
-                <img src="images/scale_closeness.png" alt="Image 2" style="width: 60%; height: auto;">
+                <img src="images/scale_closeness.png" alt="Image 2" style="width: 100%; height: auto;">
             </td>
         </tr>
     </table>
@@ -109,10 +109,10 @@ that was previously calculated in python. Then the nodes were colored based on t
     <table>
         <tr>
             <td style="width: 200px; text-align: center;">
-                <img src="images/scale_betweenness.png" alt="Image 1" style="width: 60%; height: auto;">
+                <img src="images/scale_betweenness.png" alt="Image 1" style="width: 100%; height: auto;">
             </td>
             <td style="width: 200px; text-align: center;">
-                <img src="images/eigenvector.svg" alt="Image 2" style="width: 60%; height: auto;">
+                <img src="images/scale_eigenvector.png" alt="Image 2" style="width: 100%; height: auto;">
             </td>
         </tr>
     </table>
