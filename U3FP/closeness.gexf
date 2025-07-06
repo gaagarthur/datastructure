@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2025-07-05">
+    <creator>NetworkX 3.5</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="A" label="A" />
+      <node id="B" label="B" />
+      <node id="C" label="C" />
+      <node id="D" label="D" />
+      <node id="E" label="E" />
+      <node id="F" label="F" />
+      <node id="G" label="G" />
+      <node id="H" label="H" />
+      <node id="I" label="I" />
+      <node id="J" label="J" />
+      <node id="K" label="K" />
+      <node id="L" label="L" />
+      <node id="M" label="M" />
+    </nodes>
+    <edges>
+      <edge source="A" target="B" id="0" />
+      <edge source="A" target="C" id="1" />
+      <edge source="A" target="D" id="2" />
+      <edge source="A" target="F" id="3" />
+      <edge source="D" target="E" id="4" />
+      <edge source="F" target="G" id="5" />
+      <edge source="G" target="H" id="6" />
+      <edge source="H" target="I" id="7" />
+      <edge source="I" target="J" id="8" />
+      <edge source="I" target="K" id="9" />
+      <edge source="J" target="L" id="10" />
+      <edge source="K" target="M" id="11" />
+    </edges>
+  </graph>
+</gexf>
