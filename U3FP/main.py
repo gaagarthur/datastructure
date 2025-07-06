@@ -79,7 +79,7 @@ for node in G.nodes():
     if node in Gs:
         G.nodes[node]['coshe'] = 2
 
-    G.nodes[node]['neig'] = G_simple.degree[node]
+    G.nodes[node]['neig'] = G_simple.degree[node] #calculate # neighbors
     G.nodes[node]['close'] = cc[node]
 #======================================================================
 

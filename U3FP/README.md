@@ -151,6 +151,8 @@ for node in G.nodes():
     G.nodes[node]['neig'] = G_simple.degree[node] #calculate # neighbors
     G.nodes[node]['close'] = cc[node]
 ```
+### RUN THE CODE
+In order to run the code both the [main.py](/main.py) file and the [base](/base) folder (which contains the lists of nodes and edges) must be in the same directory.
 
 ### USE OF LLMs
 
