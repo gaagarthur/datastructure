@@ -87,6 +87,16 @@ that was previously calculated in python. Then the nodes were colored based on t
     <table>
         <tr>
             <td style="width: 200px; text-align: center;">
+                <img src="images/scale_degree.png" alt="Image 1" style="width: 60%; height: auto;">
+            </td>
+            <td style="width: 200px; text-align: center;">
+                <img src="images/scale_closeness.png" alt="Image 2" style="width: 60%; height: auto;">
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td style="width: 200px; text-align: center;">
                 <p style="margin: 0 0 5px 0; text-align: center;">Betweenness Centrality</p>
                 <img src="images/betweenness.svg" alt="Image 1" style="width: 100%; height: auto;">
             </td>
@@ -96,9 +106,19 @@ that was previously calculated in python. Then the nodes were colored based on t
             </td>
         </tr>
     </table>
+    <table>
+        <tr>
+            <td style="width: 200px; text-align: center;">
+                <img src="images/scale_betweenness.png" alt="Image 1" style="width: 60%; height: auto;">
+            </td>
+            <td style="width: 200px; text-align: center;">
+                <img src="images/eigenvector.svg" alt="Image 2" style="width: 60%; height: auto;">
+            </td>
+        </tr>
+    </table>
 </div>
 
-The only two metrics left are the K-core and its shell. Because Gephi doesn't have an option to calculate the cores and shells, these metrics were obtained usin Python. First, using core_numbers function on the graph it was reveled that there was an 1-core, a 2-core and a 3-core which is the center of the network.Then a new attribute for the nodes was created "coshe" if a nodes belonged to the 3-core it would recieve a 1, if it belonged to the 2-shell it would recieve a 2 and else it would be zero. On Gephi the only thing left to do was color the nodes by those values. The 3-core is colored red and the 2-shell is in blue.
+The only two metrics left are the K-core and its shell. Because Gephi doesn't have an option to calculate the cores and shells, these metrics were obtained using Python. First, using core_numbers function on the graph it was reveled that there was an 1-core, a 2-core and a 3-core which is the center of the network. Then a new attribute for the nodes was created "coshe" if a nodes belonged to the 3-core it would receive a 1, if it belonged to the 2-shell it would receive a 2 and else it would be zero. On Gephi the only thing left to do was color the nodes by those values. The 3-core is colored red and the 2-shell is in blue.
 
 <div align="center">
   <img src="images/coshe.svg" alt="Description of image" style="width: 60%; height: auto;">
