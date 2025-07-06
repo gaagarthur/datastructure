@@ -75,11 +75,11 @@ The degree centrality, betweenness and eigenvector were all generated on the sam
   <tr>
     <td style="text-align: center; border: 1px solid #ccc; padding: 10px;">
       <p style="margin: 0 0 5px 0;">Image 1 Title</p>
-      <img src="images/degree.svg" alt="Image 1" style="width: 45%; height: auto;">
+      <img src="images/degree.svg" alt="Image 1" style="width: 45%; height: 600px;">
     </td>
     <td style="text-align: center; border: 1px solid #ccc; padding: 10px;">
       <p style="margin: 0 0 5px 0;">Image 2 Title</p>
-      <img src="images/closeness.svg" alt="Image 2" style="width: 45%; height: auto;">
+      <img src="images/closeness.svg" alt="Image 2" style="width: 45%; height: 600px;">
     </td>
   </tr>
 </table>
