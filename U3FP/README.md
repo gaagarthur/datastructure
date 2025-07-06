@@ -72,19 +72,25 @@ The degree centrality, betweenness and eigenvector were all generated on the sam
 <div align="center">
 <table>
   <tr>
-    <td style="width: 300px; text-align: center;">
+    <td style="width: 200px; text-align: center;">
       <p style="margin: 0 0 5px 0; text-align: center;">Degree Centrality</p>
       <img src="images/degree.svg" alt="Image 1" style="width: 100%; height: auto;">
     </td>
-    <td style="width: 300px; text-align: center;">
+    <td style="width: 200px; text-align: center;">
       <p style="margin: 0 0 5px 0; text-align: center;">Closeness Centrality</p>
       <img src="images/closeness.svg" alt="Image 2" style="width: 100%; height: auto;">
     </td>
   </tr>
 </table>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 2%;">
-  <img src="images/betweenness.svg" alt="Image 3" style="width: 45%; height: auto;">
-  <img src="images/eigenvector.svg" alt="Image 4" style="width: 45%; height: auto;">
-</div> 
+<table>
+  <tr>
+    <td style="width: 200px; text-align: center;">
+      <p style="margin: 0 0 5px 0; text-align: center;">Degree Centrality</p>
+      <img src="images/betweenness.svg" alt="Image 1" style="width: 100%; height: auto;">
+    </td>
+    <td style="width: 200px; text-align: center;">
+      <p style="margin: 0 0 5px 0; text-align: center;">Closeness Centrality</p>
+      <img src="images/eigenvector.svg" alt="Image 2" style="width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
