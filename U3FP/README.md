@@ -10,6 +10,8 @@ For the second part of this project, a specialist in the field related to the su
 ---
 ## PART ONE
 
+#### [Youtube Video](https://youtu.be/AvIKdyQVwTQ)
+
 ### OBJECTIVE  
 The objective for this part is to use [NetworkX](https://networkx.org/documentation/stable/index.html#) and [Gephi](https://gephi.org/) to calculate five different metrics for the network and then create five different graphs, each displaying a different metric. These metrics are: Degree Centrality, Closeness Centrality, Betweenness Centrality, Eigenvector Centrality, and the core of the network and its shell. Additionally, a version of the graph with identified communities will be deployed.
 
