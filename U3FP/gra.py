@@ -1,17 +1,22 @@
-import pandas as pd           # For data manipulation and reading tabular files
-import networkx as nx         # For building and analyzing graphs
-#import matplotlib.pyplot as plt  # For plotting graphs
-import numpy as np
+import json
 
-nodes = ['A','B','C','D','E','F','G','H','I','J','K','L','M']
-edges = [('A','B'),('A','C'),('A','D'),('A','F'),('F','G'),('D','E'),
-         ('G','H'),('H','I'),('I','J'),('I','K'),('J','L'),('K','M')]
-G = nx.Graph()
-G.add_nodes_from(nodes)
-G.add_edges_from(edges)
+# Parameters
+input_file = 'network/data.json'       # Path to your original file
+output_file = 'data.json'  # Path to save the new file
+scale_factor = 4              # Factor by which to multiply node sizes
 
+# Load nodes
+with open(input_file, 'r', encoding='utf-8') as f:
+    nodes = json.load(f)
 
-# Export the graph to a GEXF file, which can be opened in Gephi or reloaded in Python
-nx.write_gexf(G, "closeness.gexf")
-print("Export completed successfully.")
+# Scale sizes
+for node in nodes:
+    if 'size' in node:
+        node['size'] *= scale_factor
+
+# Save updated nodes
+with open(output_file, 'w', encoding='utf-8') as f:
+    json.dump(nodes, f, indent=2)
+
+print(f"Updated nodes saved to '{output_file}' with sizes scaled by {scale_factor}.")
 
