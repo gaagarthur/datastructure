@@ -59,20 +59,17 @@ for _, row in df_edges.iterrows():
 
 #MOD.: calculate attributes
 #=============================================================
-G_simple = nx.Graph(G)
+G_simple = nx.Graph(G) #convert to simple graph
 
 if len(G_simple) == 0:
     raise ValueError("G_simple is empty.")
 
-#core_num = nx.core_number(G_simple)
-#k_max = max(core_num.values())
 
-Gc = nx.k_shell(G_simple,3)
-Gs = nx.k_shell(G_simple, k=2)
-cc = nx.closeness_centrality(G)
+Gc = nx.k_shell(G_simple,3) #calculate 3-core
+Gs = nx.k_shell(G_simple, k=2) # calculate the 2-shell
+cc = nx.closeness_centrality(G) #calculate closeness
 
-core_nodes = []
-
+# Add new attributes
 for node in G.nodes():
     if node in Gc:
         G.nodes[node]['coshe'] = 1

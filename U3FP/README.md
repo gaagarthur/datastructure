@@ -58,7 +58,7 @@ The files, [nodes]() and [edges] were provided along with a [python notebook]() 
 
 All of the modifications above as well as any other are stamped with a "MOD.:" comment on main.py.
 After running main it resulted in the gexf file that was imported into Gephi.
-### THE GRAPH GEPHI
+### THE GRAPHs GEPHI
 
 When importing the graph the options **undirected** and **don't merge** were selected, because in the notebook
 the the type of graph generated was a multigraph and it is undirected and may have multiple edges between a pair of nodes.
@@ -68,8 +68,7 @@ each node has. Then a mixture of the layouts "contraction", "expansion", "ForceA
 community detection was applied. The colors were changed based on the community and the with the help of the
  ["SigmaExporter"](https://gephi.org/plugins/#/plugin/sigmaexporter) plugin the graph was exported and later [DEPLOYED](https://gaagarthur.github.io/datastructure/U3FP/network).
 #### Applying the metrics
-The degree centrality, betweenness and eigenvector were all generated on the same statistics tab, only the closeness centrality
-that was previously calculated in python. Then the nodes were colored based on those metrics leading to the four graphs.
+The degree centrality, betweenness, and eigenvector were all generated on the same statistics tab. For this group, only the closeness centrality was previously calculated in python. Then the nodes were colored  based on those metrics, colder colors representing lower values and warmer colors higher values, leading to the four graphs.
 
 <div align="center">
     <table>
@@ -123,3 +122,40 @@ The only two metrics left are the K-core and its shell. Because Gephi doesn't ha
 <div align="center">
   <img src="images/coshe.svg" alt="Description of image" style="width: 60%; height: auto;">
 </div>
+
+### PROBLEMS
+
+Some problems encountered were that NetworkX's implementation of the to calculate the k-core, k-shell and number of cores doesn't work with multigraphs. What had to be done was to make a copy of the multigraph and then convert that copy to a simple graph. since one of the requirements for this project was to make the size of the nodes proportional to the number of neighbors that node had, so once the graph was converted it was just a matter of calling a function to find the degree of every node and that would be equivalent to the nuber of neighbors. Finnally, those proprieties were added to the nodes of the original Graph.
+
+```python
+G_simple = nx.Graph(G) #convert to simple graph
+
+if len(G_simple) == 0:
+    raise ValueError("G_simple is empty.")
+
+
+Gc = nx.k_shell(G_simple,3) #calculate 3-core
+Gs = nx.k_shell(G_simple, k=2) # calculate the 2-shell
+cc = nx.closeness_centrality(G) #calculate closeness
+
+# Add new attributes
+for node in G.nodes():
+    if node in Gc:
+        G.nodes[node]['coshe'] = 1
+        
+    else:
+        G.nodes[node]['coshe'] = 0
+    if node in Gs:
+        G.nodes[node]['coshe'] = 2
+
+    G.nodes[node]['neig'] = G_simple.degree[node] #calculate # neighbors
+    G.nodes[node]['close'] = cc[node]
+```
+
+### USE OF LLMs
+
+Both OpenAI's ChatGPT and Google's Gemini were used in the making of this project primarily for editorial support, help with Gephi, and bug fixing.
+
+### REFERENCE
+
+- :books: [Coscia, Michele. The Atlas for the Aspiring Network Scientist](https://www.networkatlas.eu/)
