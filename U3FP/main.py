@@ -1,6 +1,7 @@
 # Main imports
 import pandas as pd           # For data manipulation and reading tabular files
 import networkx as nx         # For building and analyzing graphs
+#MOD.: commnet import
 #import matplotlib.pyplot as plt  # For plotting graphs
 import numpy as np            # For numerical operations
 
@@ -8,6 +9,7 @@ import numpy as np            # For numerical operations
 
 #plt.style.use("ggplot")       # Sets the plot style to 'ggplot' for better aesthetics
 
+#MOD.: Paths
 # Paths to the input files
 nodes_file = "base/GraphTest_nodes.txt"
 edges_file = "base/GraphTest_edges.txt"
@@ -16,6 +18,15 @@ edges_file = "base/GraphTest_edges.txt"
 df_nodes = pd.read_csv(nodes_file, sep="\t")  # Reads the node table using tab as separator
 df_edges = pd.read_csv(edges_file, sep="\t")  # Reads the edge table using tab as separator
 
+#MOD.: Removed preview data section
+
+# Initialize as a MultiDiGraph to support multiple directed edges between the same pair of nodes
+# G = nx.MultiDiGraph()
+
+# Use MultiGraph() instead of MultiDiGraph() if directionality is not important.
+# This allows multiple undirected edges between the same node pairs, useful for modeling
+# symmetric or bidirectional interactions like Van der Waals forces.
+
 G = nx.MultiGraph()
 
 # Add all nodes with their attributes
@@ -23,6 +34,7 @@ for _, row in df_nodes.iterrows():
     node_id = row["NodeId"]                      # Extract the node identifier
     attributes = row.drop("NodeId").to_dict()    # Convert the remaining columns to a dictionary of attributes
     G.add_node(node_id, **attributes)   
+#MOD.: Print and node's metadata explanation removed
 
 for _, row in df_edges.iterrows():
     source = row["NodeId1"]                  # Source node identifier
@@ -40,55 +52,13 @@ for _, row in df_edges.iterrows():
             except (ValueError, TypeError):
                 pass  # Leave as string if conversion fails
     G.add_edge(source, target, **attributes)
-"""
-G_simple = nx.Graph(G)
-core_numbers = nx.core_number(G_simple)
 
-# Step 1: Get k_max (maximum core number)
-k_max = max(core_numbers.values())
-#print(k_max)
-# Step 2: Identify core nodes
-core_nodes = [n for n, k in core_numbers.items() if k == k_max]
+#MOD.: Print and edge's metadata explanation removed
 
-# Step 3: Identify candidate shell nodes with core_number == k_max - 1
-shell_k_minus_1 = [n for n, k in core_numbers.items() if k == k_max - 1]
+#MOD.: data access example removed
 
-# Step 4: Among shell_k_minus_1, keep only those connected to core
-protecting_shell = set()
-for node in shell_k_minus_1:
-    neighbors = G_simple.neighbors(node)
-    if any(neigh in core_nodes for neigh in neighbors):
-        protecting_shell.add(node)
-
-# Optional: annotate
-for node in G.nodes():
-    G.nodes[node]['core'] = 1 if node in core_nodes else 0
-    #G.nodes[node]['protecting_shell'] = 1 if node in protecting_shell else 0
-    if node in protecting_shell:
-        G.nodes[node]['core'] =+ 1
-"""
-
-     
-"""
-G_simple = nx.Graph(G)
-core_num = nx.core_number(G_simple)
-#print(type(core_num))
-k_max = max(core_num.values())   
-
-Gc = nx.k_core(G_simple)
-Gs = nx.k_shell(G_simple,k=k_max-1,core_number=core_num)
-core_nodes=[]
-for node in G.nodes():
-
-    if (node in Gc):
-        G.nodes[node]['core']=1
-        if (node in Gs):
-            G.nodes[node]['core']=+1
-    else:
-        G.nodes[node]['core']=0
-
-"""
-
+#MOD.: calculate attributes
+#=============================================================
 G_simple = nx.Graph(G)
 
 if len(G_simple) == 0:
@@ -114,31 +84,7 @@ for node in G.nodes():
 
     G.nodes[node]['neig'] = G_simple.degree[node]
     G.nodes[node]['close'] = cc[node]
-
-"""
-commum =[]
-G_simple = nx.Graph(G)
-no = list(nx.k_shell(G_simple,3))
-no2 = list(nx.k_shell(G_simple,2))
-for node in no2:
-    if(node in no):
-        commum.append(node)
-
-
-print(no)
-print(len(no))
-print(commum)
-print(len(commum))
-"""
-#k_cores = set([v for k,v in nx.core_number(G_simple).items()])
-#print(k_cores)
-
-#core_numbers = nx.core_number(G_simple)
-#print(core_numbers)
-#max_k = max(core_numbers.values())
-#print(max_k)
-
-
+#======================================================================
 
 def sanitize_attributes(G):
     # Fix node attributes: replace None or NaN values with empty strings
@@ -157,8 +103,10 @@ def sanitize_attributes(G):
 sanitize_attributes(G)
 
 
-
+#MOD.: Path, commented print
 # Export the graph to a GEXF file, which can be opened in Gephi or reloaded in Python
 nx.write_gexf(G, "base/netwokr.gexf",version="1.2draft")
 #i = nx.diameter(G)
 #print(i)
+
+#MOD.:Removed Plotting section

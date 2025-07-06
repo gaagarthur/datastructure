@@ -65,9 +65,11 @@ the the type of graph generated was a multigraph and it is undirected and may ha
 With the graph loaded on Gephi, the sizes of the nodes were changed to be proportional to the number of neighbors
 each node has. Then a mixture of the layouts "contraction", "expansion", "ForceAtlas", "ForceAtlas 2","OpenOrd" and
 "Noverlap" were used to shape the overall layout. With that done, in the statistics section the "modularity" option for
-community detection was applied. The colors were changed based on the community and the with the help of the ["SigmaExporter"](https://gephi.org/plugins/#/plugin/sigmaexporter) plugin the graph was exported and later [DEPLOYED]().
+community detection was applied. The colors were changed based on the community and the with the help of the
+ ["SigmaExporter"](https://gephi.org/plugins/#/plugin/sigmaexporter) plugin the graph was exported and later [DEPLOYED](https://gaagarthur.github.io/datastructure/U3FP/network).
 #### Applying the metrics
-The degree centrality, betweenness and eigenvector were all generated on the same statistics tab, only the closeness centrality that was previously calculated in python. Then the nodes were colored based on those metrics leading to the four graphs.
+The degree centrality, betweenness and eigenvector were all generated on the same statistics tab, only the closeness centrality
+that was previously calculated in python. Then the nodes were colored based on those metrics leading to the four graphs.
 
 <div align="center">
     <table>
@@ -94,4 +96,10 @@ The degree centrality, betweenness and eigenvector were all generated on the sam
             </td>
         </tr>
     </table>
+</div>
+
+The only two metrics left are the K-core and its shell. Because Gephi doesn't have an option to calculate the cores and shells, these metrics were obtained usin Python. First, using core_numbers function on the graph it was reveled that there was an 1-core, a 2-core and a 3-core which is the center of the network.Then a new attribute for the nodes was created "coshe" if a nodes belonged to the 3-core it would recieve a 1, if it belonged to the 2-shell it would recieve a 2 and else it would be zero. On Gephi the only thing left to do was color the nodes by those values. The 3-core is colored red and the 2-shell is in blue.
+
+<div align="center">
+  <img src="images/coshe.svg" alt="Description of image" style="width: 60%; height: auto;">
 </div>
