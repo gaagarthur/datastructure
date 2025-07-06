@@ -72,15 +72,15 @@ The degree centrality, betweenness and eigenvector were all generated on the sam
 <div style="display: flex; justify-content: center; gap: 2%; margin-bottom: 20px;">
     <div style="text-align: center;">
         <p style="margin: 0 0 5px 0;">Image 1 Title</p>
-        <img src="images/degree.svg" alt="Image 1" style="width: 48%; height: auto;">
+        <img src="images/degree.svg" alt="Image 1" style="width: 45%; height: auto;">
     </div>
     <div style="text-align: center;">
         <p style="margin: 0 0 5px 0;">Image 2 Title</p>
-        <img src="images/closeness.svg" alt="Image 2" style="width: 48%; height: auto;">
+        <img src="images/closeness.svg" alt="Image 2" style="width: 45%; height: auto;">
     </div>
 </div>
 
 <div style="display: flex; justify-content: center; gap: 2%;">
-  <img src="images/betweenness.svg" alt="Image 3" style="width: 48%; height: auto;">
-  <img src="images/eigenvector.svg" alt="Image 4" style="width: 48%; height: auto;">
+  <img src="images/betweenness.svg" alt="Image 3" style="width: 45%; height: auto;">
+  <img src="images/eigenvector.svg" alt="Image 4" style="width: 45%; height: auto;">
 </div> 
