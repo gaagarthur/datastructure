@@ -47,7 +47,7 @@ When ranking nodes it's tempting to use the degree of a node to decide its impor
 
 ### GENERATING GRAPH
 
-The files, [nodes]() and [edges] were provided along with a [python notebook]() to generate a .gexf file that could be opened on Gephi. Since there is no option on the software to generate the k-core and shell, which would be both needed in this project, a couple of changes were made to the original notebook, that resulted in the [main.py]().
+The files, [nodes](base/GraphTest_nodes.txt) and [edges](base/GraphTest_edges.txt) were provided along with a [python notebook](base/Final_Project.ipynb) to generate a .gexf file that could be opened on Gephi. Since there is no option on the software to generate the k-core and shell, which would be both needed in this project, a couple of changes were made to the original notebook, that resulted in the [main.py](/main.py).
 #### The major changes were:
 - Removed magical commands
 - Calculated the k-core and its shell
