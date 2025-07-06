@@ -65,32 +65,33 @@ the the type of graph generated was a multigraph and it is undirected and may ha
 With the graph loaded on Gephi, the sizes of the nodes were changed to be proportional to the number of neighbors
 each node has. Then a mixture of the layouts "contraction", "expansion", "ForceAtlas", "ForceAtlas 2","OpenOrd" and
 "Noverlap" were used to shape the overall layout. With that done, in the statistics section the "modularity" option for
-community detection was applied. The colors were changed based on the community and the with the help of the "SigmaExporter" plugin the graph was exported and later [DEPLOYED]().
+community detection was applied. The colors were changed based on the community and the with the help of the ["SigmaExporter"](https://gephi.org/plugins/#/plugin/sigmaexporter) plugin the graph was exported and later [DEPLOYED]().
 #### Applying the metrics
 The degree centrality, betweenness and eigenvector were all generated on the same statistics tab, only the closeness centrality that was previously calculated in python. Then the nodes were colored based on those metrics leading to the four graphs.
 
 <div align="center">
-<table>
-  <tr>
-    <td style="width: 200px; text-align: center;">
-      <p style="margin: 0 0 5px 0; text-align: center;">Degree Centrality</p>
-      <img src="images/degree.svg" alt="Image 1" style="width: 100%; height: auto;">
-    </td>
-    <td style="width: 200px; text-align: center;">
-      <p style="margin: 0 0 5px 0; text-align: center;">Closeness Centrality</p>
-      <img src="images/closeness.svg" alt="Image 2" style="width: 100%; height: auto;">
-    </td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td style="width: 200px; text-align: center;">
-      <p style="margin: 0 0 5px 0; text-align: center;">Degree Centrality</p>
-      <img src="images/betweenness.svg" alt="Image 1" style="width: 100%; height: auto;">
-    </td>
-    <td style="width: 200px; text-align: center;">
-      <p style="margin: 0 0 5px 0; text-align: center;">Closeness Centrality</p>
-      <img src="images/eigenvector.svg" alt="Image 2" style="width: 100%; height: auto;">
-    </td>
-  </tr>
-</table>
+    <table>
+        <tr>
+            <td style="width: 200px; text-align: center;">
+                <p style="margin: 0 0 5px 0; text-align: center;">Degree Centrality</p>
+                <img src="images/degree.svg" alt="Image 1" style="width: 100%; height: auto;">
+            </td>
+            <td style="width: 200px; text-align: center;">
+                <p style="margin: 0 0 5px 0; text-align: center;">Closeness Centrality</p>
+                <img src="images/closeness.svg" alt="Image 2" style="width: 100%; height: auto;">
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td style="width: 200px; text-align: center;">
+                <p style="margin: 0 0 5px 0; text-align: center;">Betweenness Centrality</p>
+                <img src="images/betweenness.svg" alt="Image 1" style="width: 100%; height: auto;">
+            </td>
+            <td style="width: 200px; text-align: center;">
+                <p style="margin: 0 0 5px 0; text-align: center;">Eigenvector Centrality</p>
+                <img src="images/eigenvector.svg" alt="Image 2" style="width: 100%; height: auto;">
+            </td>
+        </tr>
+    </table>
+</div>
