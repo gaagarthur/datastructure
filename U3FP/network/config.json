@@ -13,13 +13,13 @@
     "title": "Mystery Network"
   },
   "legend": {
-    "edgeLabel": "-",
+    "edgeLabel": "Unknown",
     "colorLabel": "detected communities",
-    "nodeLabel": "-"
+    "nodeLabel": "Unknown"
   },
   "features": {
     "search": true,
-    "groupSelectorAttribute": false,
+    "groupSelectorAttribute": "color",
     "hoverBehavior": "default"
   },
   "informationPanel": {
