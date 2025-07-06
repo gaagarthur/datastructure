@@ -70,8 +70,14 @@ community detection was applied. The colors were changed based on the community 
 The degree centrality, betweenness and eigenvector were all generated on the same statistics tab, only the closeness centrality that was previously calculated in python. Then the nodes were colored based on those metrics leading to the four graphs.
 
 <div style="display: flex; justify-content: center; gap: 2%; margin-bottom: 20px;">
-  <img src="images/degree.svg" alt="Image 1" style="width: 48%; height: auto;">
-  <img src="images/closeness.svg" alt="Image 2" style="width: 48%; height: auto;">
+    <div style="text-align: center;">
+        <p style="margin: 0 0 5px 0;">Image 1 Title</p>
+        <img src="images/degree.svg" alt="Image 1" style="width: 48%; height: auto;">
+    </div>
+    <div style="text-align: center;">
+        <p style="margin: 0 0 5px 0;">Image 2 Title</p>
+        <img src="images/closeness.svg" alt="Image 2" style="width: 48%; height: auto;">
+    </div>
 </div>
 
 <div style="display: flex; justify-content: center; gap: 2%;">
