@@ -12,5 +12,5 @@ This repository is for submitting and storing assignments related to the **Algor
 |[**U2T1**](https://github.com/gaagarthur/datastructure/tree/main/U2T1)| Compare Algorithms to Find Shortest Path with OSM Data |
 |[**U2T2**](https://github.com/gaagarthur/datastructure/tree/main/U2T2)| - |
 |[**U2T3**](https://github.com/gaagarthur/datastructure/tree/main/U2T3)| MST, Kruskals' algorithm |
-
+|[**U3FP**](https://github.com/gaagarthur/datastructure/tree/main/U3FP)| Complex Network's Metrics and Gephi |
 
